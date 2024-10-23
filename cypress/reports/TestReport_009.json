@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-10T18:29:42.186Z",
+    "end": "2020-09-10T18:30:17.798Z",
+    "duration": 35612,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61a7ff61-1535-4d54-87ea-4f23ddf1fd26",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\NopCommerceTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\NopCommerceTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d11c70cf-5e09-4d08-826b-3e84e55a400b",
+          "title": "Nop Commerce Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the shopping cart amount",
+              "fullTitle": "Nop Commerce Suite Verify the shopping cart amount",
+              "timedOut": null,
+              "duration": 28625,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit('https://demo.nopcommerce.com/'); //search in the search box\ncy.get(\"#small-searchterms[name='q']\").clear().type('Apple Macbook Pro 13-inch'); //click on search button\ncy.get(\"[type='submit']\").click(); //click on add to cart button\ncy.get(\"[value='Add to cart']\").click(); //type quantity of the product in the text box\ncy.get(\"#product_enteredQuantity_4\").clear().type('4'); //click on add to cart button\ncy.get(\"#add-to-cart-button-4\").click();\ncy.wait(5000); //click on shopping cart link\ncy.get(\"#topcartlink > a > span.cart-label\").click();\ncy.wait(5000); //capture the product subtotal amount\ncy.get(\".product-subtotal\").contains('$7,200.00');",
+              "err": {},
+              "uuid": "73f7b1d6-e6bc-436b-9c6b-60489c5ebe6d",
+              "parentUUID": "d11c70cf-5e09-4d08-826b-3e84e55a400b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73f7b1d6-e6bc-436b-9c6b-60489c5ebe6d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

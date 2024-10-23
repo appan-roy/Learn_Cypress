@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-10T18:24:50.645Z",
+    "end": "2020-09-10T18:25:52.562Z",
+    "duration": 61917,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61223f37-eed9-4c35-9a13-27000cf8f865",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\FileUploadTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\FileUploadTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+          "title": "File Upload Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Simple file upload",
+              "fullTitle": "File Upload Suite Simple file upload",
+              "timedOut": null,
+              "duration": 28443,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.contains('Contact us').should('be.visible').click();\n/* Plain HTML input */\nvar yourFixturePath = 'testdata.json'; //always give fixture file\ncy.get('#fileUpload').attachFile(yourFixturePath); //input type=\"file\" should be there on the element",
+              "err": {},
+              "uuid": "8cd04176-242e-4c53-bf49-ec95e67e4087",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Drag and drop file upload",
+              "fullTitle": "File Upload Suite Drag and drop file upload",
+              "timedOut": null,
+              "duration": 1922,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://css-tricks.com/examples/DragAndDropFileUploading/');\n/* Drag-n-drop component */\nvar yourFixturePath = 'image.jpg'; //always give fixture file\ncy.get('#file').attachFile(yourFixturePath, {\n  subjectType: 'drag-n-drop'\n});\ncy.get(\".box__success\").should('contain.text', 'Done!');",
+              "err": {},
+              "uuid": "e8038168-b03f-40c0-ac79-3139bada7f9a",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Multiple files upload",
+              "fullTitle": "File Upload Suite Multiple files upload",
+              "timedOut": null,
+              "duration": 5489,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\n/* You can also attach multiple files by chaining the command */\nvar yourFixturePath = 'example.json'; //always give fixture file\nvar yourFixturePath2 = 'image.jpg'; //always give fixture file\nvar yourFixturePath3 = 'testdata.json'; //always give fixture file\ncy.get('#filesToUpload').attachFile(yourFixturePath).attachFile(yourFixturePath2).attachFile(yourFixturePath3);\ncy.get(\"#fileList > li\").should('not.contain.text', 'No Files Selected');",
+              "err": {},
+              "uuid": "7d8accf5-ff86-4410-b06d-f2783ecaca3b",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Change file name while uploading",
+              "fullTitle": "File Upload Suite Change file name while uploading",
+              "timedOut": null,
+              "duration": 2937,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\n/* You can also attach multiple files by chaining the command */\nvar yourFixturePath = 'example.json'; //always give fixture file\ncy.get('#filesToUpload').attachFile({\n  filePath: yourFixturePath,\n  fileName: 'users.json'\n});\ncy.get(\"#fileList > li\").should('not.contain.text', 'No Files Selected');",
+              "err": {},
+              "uuid": "ef15161d-9ce8-4b1d-bbdf-0cfd498ea363",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8cd04176-242e-4c53-bf49-ec95e67e4087",
+            "e8038168-b03f-40c0-ac79-3139bada7f9a",
+            "7d8accf5-ff86-4410-b06d-f2783ecaca3b",
+            "ef15161d-9ce8-4b1d-bbdf-0cfd498ea363"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

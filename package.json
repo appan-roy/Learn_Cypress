@@ -1,0 +1,24 @@
+{
+  "name": "learncypress",
+  "version": "1.0.0",
+  "description": "This is my first Cypress project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run --config pageLoadTimeout=60000",
+    "headedtest": "node_modules\\.bin\\cypress run --headed --config pageLoadTimeout=60000",
+    "chrometest": "node_modules\\.bin\\cypress run --browser chrome --config pageLoadTimeout=60000",
+    "merge": "mochawesome-merge cypress/reports/*.json -o cypress/reports/final.json",
+    "generate_report": "marge cypress/reports/final.json --reportDir ./ --inline",
+    "final_report": "npm run merge && npm run generate_report"
+  },
+  "author": "Appan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.1.0",
+    "cypress-file-upload": "^4.1.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-09-10T18:26:04.032Z",
+    "end": "2020-09-10T18:28:56.999Z",
+    "duration": 172967,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b6f310e1-13f7-41c3-aa8a-1ca74464a543",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\MouseOverHandling.spec.js",
+      "file": "cypress\\integration\\webautomation\\MouseOverHandling.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+          "title": "Mouse Over Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Spicejet Sign Up",
+              "fullTitle": "Mouse Over Suite Spicejet Sign Up",
+              "timedOut": null,
+              "duration": 38915,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit(\"https://www.spicejet.com/\"); //mouse over login / signup\ncy.contains('Login / Signup').should('be.visible').trigger('mouseover'); //mouse over spiceclub members\ncy.contains('SpiceClub Members').should('be.visible').trigger('mouseover'); //click on sign up\ncy.contains('Sign up').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "96f3ff1e-d456-4469-91e0-ee5dddb7217e",
+              "parentUUID": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Spicejet Member Login",
+              "fullTitle": "Mouse Over Suite Spicejet Member Login",
+              "timedOut": null,
+              "duration": 63399,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//mouse over login / signup\ncy.contains('Login / Signup').should('be.visible').trigger('mouseover'); //mouse over spiceclub members\ncy.contains('SpiceClub Members').should('be.visible').trigger('mouseover'); //click on member login\ncy.contains('Member Login').click({\n  force: true\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.spicejet.com/__cypress/runner/cypress_runner.js:157131:13)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:157390:14\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:4911:14)",
+                "diff": null
+              },
+              "uuid": "7e17b2b9-4dc6-4218-beb7-519b0d645a7d",
+              "parentUUID": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shopping Cart",
+              "fullTitle": "Mouse Over Suite Shopping Cart",
+              "timedOut": null,
+              "duration": 62595,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit(\"http://automationpractice.com/index.php\"); //click on first element add to cart\ncy.get(\".ajax_add_to_cart_button\").first().click(); //close the popup\ncy.get(\".cross\").click(); //show the cart block\ncy.get(\".cart_block\").should('be.hidden').invoke('show'); //click on checkout\ncy.get(\"#button_order_cart\").click(); //verify the url\ncy.url().should('include', 'controller=order');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.spicejet.com/__cypress/runner/cypress_runner.js:157131:13)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:158114:16\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.spicejet.com/__cypress/tests?p=cypress\\integration\\webautomation\\MouseOverHandling.spec.js:124:8)",
+                "diff": null
+              },
+              "uuid": "18287e20-929b-4a0f-a555-83988b4fa169",
+              "parentUUID": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "96f3ff1e-d456-4469-91e0-ee5dddb7217e"
+          ],
+          "failures": [
+            "7e17b2b9-4dc6-4218-beb7-519b0d645a7d",
+            "18287e20-929b-4a0f-a555-83988b4fa169"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 164909,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

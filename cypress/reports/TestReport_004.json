@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-10T18:24:02.497Z",
+    "end": "2020-09-10T18:24:44.823Z",
+    "duration": 42326,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "31d62751-2998-45c8-ac36-4ccb71259158",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\DataDrivenTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\DataDrivenTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eea86867-01c4-4411-876f-729798bff461",
+          "title": "Orange HRM Data Driven Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Orange HRM Login",
+              "fullTitle": "Orange HRM Data Driven Suite Verify Orange HRM Login",
+              "timedOut": null,
+              "duration": 35527,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.orangeHrmStartApp(this.data.url);\nfor (var i = 0; i < this.data.username.length; i++) {\n  cy.orangeHrmLogin(this.data.username[i], this.data.password[i]);\n  cy.get(\"body\").then(function ($body) {\n    if ($body.find(\"#menu_dashboard_index > b:nth-child(1)\").length != 0) {\n      cy.log('User logged in to the application successfully');\n      cy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');\n      cy.orangeHrmLogout();\n    } else {\n      cy.log('Invalid credentials !! Please try again later');\n    }\n  });\n}",
+              "err": {},
+              "uuid": "1b5d4c17-f128-401c-8134-439953cc6031",
+              "parentUUID": "eea86867-01c4-4411-876f-729798bff461",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b5d4c17-f128-401c-8134-439953cc6031"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

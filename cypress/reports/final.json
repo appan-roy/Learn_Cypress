@@ -1,0 +1,1123 @@
+{
+  "stats": {
+    "suites": 15,
+    "tests": 25,
+    "passes": 22,
+    "pending": 0,
+    "failures": 3,
+    "start": "2020-09-10T19:01:15.321Z",
+    "end": "2020-09-10T19:01:15.321Z",
+    "duration": 446069,
+    "testsRegistered": 25,
+    "passPercent": 88,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4b883a99-c1b5-40d0-8e35-cddc0e855da8",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\BrowserPageHandling.spec.js",
+      "file": "cypress\\integration\\webautomation\\BrowserPageHandling.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c697639-d48f-4f2f-8609-8aded4155496",
+          "title": "Browser Page Handling Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Page navigation back and forward",
+              "fullTitle": "Browser Page Handling Suite Page navigation back and forward",
+              "timedOut": null,
+              "duration": 14771,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit('https://demo.nopcommerce.com/'); //verify home page title\ncy.title().should('eq', 'nopCommerce demo store'); //click on register\ncy.get(\".ico-register\").click(); //verify registration page title\ncy.title().should('eq', 'nopCommerce demo store. Register'); //go back to home page\ncy.go('back'); //verify home page title\ncy.title().should('eq', 'nopCommerce demo store'); //go forward to registration page\ncy.go('forward'); //verify registration page title\ncy.title().should('eq', 'nopCommerce demo store. Register'); //go back to home page\ncy.go(-1); //verify home page title\ncy.title().should('eq', 'nopCommerce demo store'); //go forward to registration page\ncy.go(1); //verify registration page title\ncy.title().should('eq', 'nopCommerce demo store. Register');",
+              "err": {},
+              "uuid": "f057c62e-f45e-4df3-ae1d-6e64045007f0",
+              "parentUUID": "5c697639-d48f-4f2f-8609-8aded4155496",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Page refresh",
+              "fullTitle": "Browser Page Handling Suite Page refresh",
+              "timedOut": null,
+              "duration": 1093,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//refresh the web page\ncy.reload();",
+              "err": {},
+              "uuid": "b64449d9-11ee-46a5-a217-89f8f1aaa4eb",
+              "parentUUID": "5c697639-d48f-4f2f-8609-8aded4155496",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f057c62e-f45e-4df3-ae1d-6e64045007f0",
+            "b64449d9-11ee-46a5-a217-89f8f1aaa4eb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15864,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f96f87f4-384e-4d17-bf3b-ed2d0f7caa45",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\CURAHealthcareTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\CURAHealthcareTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "441a618e-13c1-42eb-b706-5948c518c44a",
+          "title": "CURA Healthcare Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify appointment booking",
+              "fullTitle": "CURA Healthcare Suite Verify appointment booking",
+              "timedOut": null,
+              "duration": 30184,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit('https://katalon-demo-cura.herokuapp.com/'); //check current url is valid or not\ncy.url().should('include', 'herokuapp'); //check whether make appointment button is visible and enabled or not\ncy.get(\"#btn-make-appointment\").should('be.visible'); //click on make appointment button\ncy.get(\"#btn-make-appointment\").click(); //check whether username textbox is visible and enabled or not\ncy.get(\"#txt-username\").should('be.visible').should('be.enabled'); //type the username in the username textbox\ncy.get(\"#txt-username\").clear().type('John Doe'); //check whether password textbox is visible and enabled or not\ncy.get(\"#txt-password\").should('be.visible').should('be.enabled'); //type the password in the password textbox\ncy.get(\"#txt-password\").clear().type('ThisIsNotAPassword'); //check whether login button is visible and enabled or not\ncy.get(\"#btn-login\").should('be.visible').should('be.enabled'); //click on login button\ncy.get(\"#btn-login\").click(); //verify page title\ncy.title().should('eq', 'CURA Healthcare Service'); //verify whether the facility dropdown is visible and enabled or not\ncy.get(\"#combo_facility\").select('Seoul CURA Healthcare Center').should('have.value', 'Seoul CURA Healthcare Center'); //verify whether apply for hospital readmission is visible and enabled or not\ncy.get('#chk_hospotal_readmission').should('be.visible').should('not.be.checked'); //check the hospital readmission checkbox\ncy.get('#chk_hospotal_readmission').check().should('have.value', 'Yes'); //verify whether medicare radio button is visible and checked or not\ncy.get(\"#radio_program_medicare\").should('be.visible').should('be.checked'); //verify whether medicaid radio button is visible and checked or not\ncy.get(\"#radio_program_medicaid\").should('be.visible').should('not.be.checked'); //click on the medicaid radio button\ncy.get(\"#radio_program_medicaid\").click(); //check whether visit date textbox is visible and enabled or not\ncy.get(\"#txt_visit_date\").should('be.visible').should('be.enabled'); //type the visit date in the visit date textbox\ncy.get(\"#txt_visit_date\").clear().type('05/09/2020'); //check whether comment textbox is visible and enabled or not\ncy.get(\"#txt_visit_date\").should('be.visible').should('be.enabled'); //type the comment in the comment textbox\ncy.get(\"#txt_visit_date\").clear().type('05/09/2020'); //check whether book appointment button is visible and enabled or not\ncy.get(\"#btn-book-appointment\").should('be.visible').should('be.enabled'); //click on book appointment button\ncy.get(\"#btn-book-appointment\").click(); //verify appointment is booked successfully or not\ncy.get(\"#summary > div > div > div.col-xs-12.text-center > h2\").contains('Appointment Confirmation');",
+              "err": {},
+              "uuid": "8e2fb8f5-2934-43e4-a53c-f38cc52f1aa9",
+              "parentUUID": "441a618e-13c1-42eb-b706-5948c518c44a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8e2fb8f5-2934-43e4-a53c-f38cc52f1aa9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30184,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8a86ac24-3092-43be-9a44-84080e84120c",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\CustomCommandsTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\CustomCommandsTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bc42c58e-0a5d-410f-bc55-3a4ccc09ab9e",
+          "title": "Orange HRM Custom Commands Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify dashboard tab is present",
+              "fullTitle": "Orange HRM Custom Commands Suite Verify dashboard tab is present",
+              "timedOut": null,
+              "duration": 17834,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//check dashboard is present in the home page\ncy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');",
+              "err": {},
+              "uuid": "27fe5c69-a5a1-4147-aa60-3d2e0866db24",
+              "parentUUID": "bc42c58e-0a5d-410f-bc55-3a4ccc09ab9e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "27fe5c69-a5a1-4147-aa60-3d2e0866db24"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17834,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "31d62751-2998-45c8-ac36-4ccb71259158",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\DataDrivenTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\DataDrivenTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eea86867-01c4-4411-876f-729798bff461",
+          "title": "Orange HRM Data Driven Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Orange HRM Login",
+              "fullTitle": "Orange HRM Data Driven Suite Verify Orange HRM Login",
+              "timedOut": null,
+              "duration": 35527,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.orangeHrmStartApp(this.data.url);\nfor (var i = 0; i < this.data.username.length; i++) {\n  cy.orangeHrmLogin(this.data.username[i], this.data.password[i]);\n  cy.get(\"body\").then(function ($body) {\n    if ($body.find(\"#menu_dashboard_index > b:nth-child(1)\").length != 0) {\n      cy.log('User logged in to the application successfully');\n      cy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');\n      cy.orangeHrmLogout();\n    } else {\n      cy.log('Invalid credentials !! Please try again later');\n    }\n  });\n}",
+              "err": {},
+              "uuid": "1b5d4c17-f128-401c-8134-439953cc6031",
+              "parentUUID": "eea86867-01c4-4411-876f-729798bff461",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b5d4c17-f128-401c-8134-439953cc6031"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "61223f37-eed9-4c35-9a13-27000cf8f865",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\FileUploadTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\FileUploadTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+          "title": "File Upload Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Simple file upload",
+              "fullTitle": "File Upload Suite Simple file upload",
+              "timedOut": null,
+              "duration": 28443,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.contains('Contact us').should('be.visible').click();\n/* Plain HTML input */\nvar yourFixturePath = 'testdata.json'; //always give fixture file\ncy.get('#fileUpload').attachFile(yourFixturePath); //input type=\"file\" should be there on the element",
+              "err": {},
+              "uuid": "8cd04176-242e-4c53-bf49-ec95e67e4087",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Drag and drop file upload",
+              "fullTitle": "File Upload Suite Drag and drop file upload",
+              "timedOut": null,
+              "duration": 1922,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://css-tricks.com/examples/DragAndDropFileUploading/');\n/* Drag-n-drop component */\nvar yourFixturePath = 'image.jpg'; //always give fixture file\ncy.get('#file').attachFile(yourFixturePath, {\n  subjectType: 'drag-n-drop'\n});\ncy.get(\".box__success\").should('contain.text', 'Done!');",
+              "err": {},
+              "uuid": "e8038168-b03f-40c0-ac79-3139bada7f9a",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Multiple files upload",
+              "fullTitle": "File Upload Suite Multiple files upload",
+              "timedOut": null,
+              "duration": 5489,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\n/* You can also attach multiple files by chaining the command */\nvar yourFixturePath = 'example.json'; //always give fixture file\nvar yourFixturePath2 = 'image.jpg'; //always give fixture file\nvar yourFixturePath3 = 'testdata.json'; //always give fixture file\ncy.get('#filesToUpload').attachFile(yourFixturePath).attachFile(yourFixturePath2).attachFile(yourFixturePath3);\ncy.get(\"#fileList > li\").should('not.contain.text', 'No Files Selected');",
+              "err": {},
+              "uuid": "7d8accf5-ff86-4410-b06d-f2783ecaca3b",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Change file name while uploading",
+              "fullTitle": "File Upload Suite Change file name while uploading",
+              "timedOut": null,
+              "duration": 2937,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\n/* You can also attach multiple files by chaining the command */\nvar yourFixturePath = 'example.json'; //always give fixture file\ncy.get('#filesToUpload').attachFile({\n  filePath: yourFixturePath,\n  fileName: 'users.json'\n});\ncy.get(\"#fileList > li\").should('not.contain.text', 'No Files Selected');",
+              "err": {},
+              "uuid": "ef15161d-9ce8-4b1d-bbdf-0cfd498ea363",
+              "parentUUID": "56e8d4c4-bcef-43e3-b262-5500bcdc1cb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8cd04176-242e-4c53-bf49-ec95e67e4087",
+            "e8038168-b03f-40c0-ac79-3139bada7f9a",
+            "7d8accf5-ff86-4410-b06d-f2783ecaca3b",
+            "ef15161d-9ce8-4b1d-bbdf-0cfd498ea363"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3a8689c2-4b2c-48d4-ab0d-d0a6a7a29f0a",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\Hooks.spec.js",
+      "file": "cypress\\integration\\webautomation\\Hooks.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0a91dfd9-3b5a-4a2f-a97e-8c60c2d9d938",
+          "title": "Hooks Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "First Test Case",
+              "fullTitle": "Hooks Suite First Test Case",
+              "timedOut": null,
+              "duration": 138,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"This is first test case\");",
+              "err": {},
+              "uuid": "18770486-e76b-4407-bb99-d49457f26c05",
+              "parentUUID": "0a91dfd9-3b5a-4a2f-a97e-8c60c2d9d938",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Second Test Case",
+              "fullTitle": "Hooks Suite Second Test Case",
+              "timedOut": null,
+              "duration": 108,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"This is second test case\");",
+              "err": {},
+              "uuid": "6e249245-75a2-46ab-9386-460c2f784f0a",
+              "parentUUID": "0a91dfd9-3b5a-4a2f-a97e-8c60c2d9d938",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Third Test Case",
+              "fullTitle": "Hooks Suite Third Test Case",
+              "timedOut": null,
+              "duration": 56,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(\"This is third test case\");",
+              "err": {},
+              "uuid": "ce1660a8-cf29-4525-aaf1-e1e4228f7945",
+              "parentUUID": "0a91dfd9-3b5a-4a2f-a97e-8c60c2d9d938",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18770486-e76b-4407-bb99-d49457f26c05",
+            "6e249245-75a2-46ab-9386-460c2f784f0a",
+            "ce1660a8-cf29-4525-aaf1-e1e4228f7945"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 302,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b6f310e1-13f7-41c3-aa8a-1ca74464a543",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\MouseOverHandling.spec.js",
+      "file": "cypress\\integration\\webautomation\\MouseOverHandling.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+          "title": "Mouse Over Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Spicejet Sign Up",
+              "fullTitle": "Mouse Over Suite Spicejet Sign Up",
+              "timedOut": null,
+              "duration": 38915,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit(\"https://www.spicejet.com/\"); //mouse over login / signup\ncy.contains('Login / Signup').should('be.visible').trigger('mouseover'); //mouse over spiceclub members\ncy.contains('SpiceClub Members').should('be.visible').trigger('mouseover'); //click on sign up\ncy.contains('Sign up').click({\n  force: true\n});",
+              "err": {},
+              "uuid": "96f3ff1e-d456-4469-91e0-ee5dddb7217e",
+              "parentUUID": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Spicejet Member Login",
+              "fullTitle": "Mouse Over Suite Spicejet Member Login",
+              "timedOut": null,
+              "duration": 63399,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//mouse over login / signup\ncy.contains('Login / Signup').should('be.visible').trigger('mouseover'); //mouse over spiceclub members\ncy.contains('SpiceClub Members').should('be.visible').trigger('mouseover'); //click on member login\ncy.contains('Member Login').click({\n  force: true\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.spicejet.com/__cypress/runner/cypress_runner.js:157131:13)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:157390:14\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:4911:14)",
+                "diff": null
+              },
+              "uuid": "7e17b2b9-4dc6-4218-beb7-519b0d645a7d",
+              "parentUUID": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shopping Cart",
+              "fullTitle": "Mouse Over Suite Shopping Cart",
+              "timedOut": null,
+              "duration": 62595,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit(\"http://automationpractice.com/index.php\"); //click on first element add to cart\ncy.get(\".ajax_add_to_cart_button\").first().click(); //close the popup\ncy.get(\".cross\").click(); //show the cart block\ncy.get(\".cart_block\").should('be.hidden').invoke('show'); //click on checkout\ncy.get(\"#button_order_cart\").click(); //verify the url\ncy.url().should('include', 'controller=order');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.spicejet.com/__cypress/runner/cypress_runner.js:157131:13)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:158114:16\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at https://www.spicejet.com/__cypress/runner/cypress_runner.js:5447:41\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (https://www.spicejet.com/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.spicejet.com/__cypress/tests?p=cypress\\integration\\webautomation\\MouseOverHandling.spec.js:124:8)",
+                "diff": null
+              },
+              "uuid": "18287e20-929b-4a0f-a555-83988b4fa169",
+              "parentUUID": "c80ae91d-bed0-447a-92dc-b4d35969c6c0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "96f3ff1e-d456-4469-91e0-ee5dddb7217e"
+          ],
+          "failures": [
+            "7e17b2b9-4dc6-4218-beb7-519b0d645a7d",
+            "18287e20-929b-4a0f-a555-83988b4fa169"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 164909,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "66405b45-69b4-4a6d-9151-ccadbb887086",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\MyFirstTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\MyFirstTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a49e192-bca2-44da-9686-20d63151ed43",
+          "title": "My First Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify upstox login page title",
+              "fullTitle": "My First Test Suite Verify upstox login page title",
+              "timedOut": null,
+              "duration": 23819,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to URL\ncy.visit('https://pro.upstox.com/login'); //Assertion\ncy.title().should('eq', 'Upstocks Pro');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'Upstox Pro' to equal 'Upstocks Pro'",
+                "estack": "AssertionError: Timed out retrying: expected 'Upstox Pro' to equal 'Upstocks Pro'\n    at Context.eval (https://pro.upstox.com/__cypress/tests?p=cypress\\integration\\webautomation\\MyFirstTest.spec.js:106:16)",
+                "diff": "- 'Upstox Pro'\n+ 'Upstocks Pro'\n"
+              },
+              "uuid": "f98123cf-547e-4c41-8143-0741d071e468",
+              "parentUUID": "4a49e192-bca2-44da-9686-20d63151ed43",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify upstox login page title",
+              "fullTitle": "My First Test Suite Verify upstox login page title",
+              "timedOut": null,
+              "duration": 4656,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to URL\ncy.visit('https://pro.upstox.com/login'); //Assertion\ncy.title().should('eq', 'Upstox Pro');",
+              "err": {},
+              "uuid": "09be9f79-bfa5-4dba-8941-59ae20a4baee",
+              "parentUUID": "4a49e192-bca2-44da-9686-20d63151ed43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09be9f79-bfa5-4dba-8941-59ae20a4baee"
+          ],
+          "failures": [
+            "f98123cf-547e-4c41-8143-0741d071e468"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 28475,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "61a7ff61-1535-4d54-87ea-4f23ddf1fd26",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\NopCommerceTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\NopCommerceTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d11c70cf-5e09-4d08-826b-3e84e55a400b",
+          "title": "Nop Commerce Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the shopping cart amount",
+              "fullTitle": "Nop Commerce Suite Verify the shopping cart amount",
+              "timedOut": null,
+              "duration": 28625,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit('https://demo.nopcommerce.com/'); //search in the search box\ncy.get(\"#small-searchterms[name='q']\").clear().type('Apple Macbook Pro 13-inch'); //click on search button\ncy.get(\"[type='submit']\").click(); //click on add to cart button\ncy.get(\"[value='Add to cart']\").click(); //type quantity of the product in the text box\ncy.get(\"#product_enteredQuantity_4\").clear().type('4'); //click on add to cart button\ncy.get(\"#add-to-cart-button-4\").click();\ncy.wait(5000); //click on shopping cart link\ncy.get(\"#topcartlink > a > span.cart-label\").click();\ncy.wait(5000); //capture the product subtotal amount\ncy.get(\".product-subtotal\").contains('$7,200.00');",
+              "err": {},
+              "uuid": "73f7b1d6-e6bc-436b-9c6b-60489c5ebe6d",
+              "parentUUID": "d11c70cf-5e09-4d08-826b-3e84e55a400b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73f7b1d6-e6bc-436b-9c6b-60489c5ebe6d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7c4743b4-02ee-4eea-b78a-384985217ac1",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\OnlyTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\OnlyTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "557c0cd8-a5b5-42b0-bea6-38b28bb46942",
+          "title": "Run Only Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify upstox login page title",
+              "fullTitle": "Run Only Test Suite Verify upstox login page title",
+              "timedOut": null,
+              "duration": 8974,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to URL\ncy.visit('https://pro.upstox.com/login'); //Assertion\ncy.title().should('eq', 'Upstox Pro');",
+              "err": {},
+              "uuid": "ed03c5f6-ade6-4c2d-a660-31ef52c18b14",
+              "parentUUID": "557c0cd8-a5b5-42b0-bea6-38b28bb46942",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed03c5f6-ade6-4c2d-a660-31ef52c18b14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fc978e3b-b8d3-4c15-9698-ea66442feb9a",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\OrangeHRMLoginTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\OrangeHRMLoginTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e46f807-9d04-4899-b8fd-54e82bf3be71",
+          "title": "Orange HRM Login Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify dashboard tab is present",
+              "fullTitle": "Orange HRM Login Suite Verify dashboard tab is present",
+              "timedOut": null,
+              "duration": 18482,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//check dashboard is present in the home page\ncy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');",
+              "err": {},
+              "uuid": "aa714732-c38e-4e15-a968-61f7e0af4664",
+              "parentUUID": "0e46f807-9d04-4899-b8fd-54e82bf3be71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa714732-c38e-4e15-a968-61f7e0af4664"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18482,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "82e35be5-c91c-4b54-9149-ab3c06b20dbe",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\PageObjectModelTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\PageObjectModelTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa48b57d-069a-470e-840e-a550514b1a41",
+          "title": "Page Object Model Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Orange HRM Login Test",
+              "fullTitle": "Page Object Model Suite Orange HRM Login Test",
+              "timedOut": null,
+              "duration": 18639,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify dashboard tab is present\ncy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');",
+              "err": {},
+              "uuid": "89f220f0-270b-44a5-8500-efbe385e3cdb",
+              "parentUUID": "aa48b57d-069a-470e-840e-a550514b1a41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89f220f0-270b-44a5-8500-efbe385e3cdb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18639,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ea8d9edf-4ee4-4070-af11-ba82e0037091",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\ParameterizationTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\ParameterizationTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a1226313-1a8c-4cbb-b3d4-71a90c78945b",
+          "title": "Orange HRM Parameterization Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify dashboard tab is present",
+              "fullTitle": "Orange HRM Parameterization Suite Verify dashboard tab is present",
+              "timedOut": null,
+              "duration": 17566,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//check dashboard is present in the home page\ncy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');",
+              "err": {},
+              "uuid": "b1da3324-cd34-4ead-83f9-33b7f9807ca4",
+              "parentUUID": "a1226313-1a8c-4cbb-b3d4-71a90c78945b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b1da3324-cd34-4ead-83f9-33b7f9807ca4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "58f4f0db-489d-43c6-9e6b-2ccb937375ae",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\ServiceUnavailableHandling.spec.js",
+      "file": "cypress\\integration\\webautomation\\ServiceUnavailableHandling.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6c23176-6539-4bb6-b542-4610c3798367",
+          "title": "Service Unavailable Handling Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hubspot login page handling",
+              "fullTitle": "Service Unavailable Handling Suite Hubspot login page handling",
+              "timedOut": null,
+              "duration": 12423,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit(\"https://app.hubspot.com/login\", {\n  failOnStatusCode: false\n}); //service unavailable handling\n//type username\ncy.get(\"#username\").clear().type('test@abc.com'); //type password\ncy.get(\"#password\").clear().type('test123');",
+              "err": {},
+              "uuid": "bb542598-707e-4e97-97b3-9fc3133c01d4",
+              "parentUUID": "c6c23176-6539-4bb6-b542-4610c3798367",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb542598-707e-4e97-97b3-9fc3133c01d4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12423,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8152b8ab-0b35-44dd-ab6e-c733c9757a7e",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\AlertsHandling.spec.js",
+      "file": "cypress\\integration\\webautomation\\AlertsHandling.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "84985c9a-1eaf-415c-a78f-80dd74ce9bba",
+          "title": "Alerts Handling Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Alert OK",
+              "fullTitle": "Alerts Handling Suite Alert OK",
+              "timedOut": null,
+              "duration": 8766,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//navigate to url\ncy.visit('http://demo.automationtesting.in/Alerts.html'); //click on alert with ok segment\ncy.get(\"ul.nav-tabs > li:nth-child(1) > a:nth-child(1)\").click(); //click on the button\ncy.get(\".btn-danger\").click(); //to verify alert message, raise an event\ncy.on('window:alert', function (strMessage) {\n  expect(strMessage).to.equal('I am an alert box!');\n});",
+              "err": {},
+              "uuid": "4fd46e79-2ca2-498b-af24-92b8f6d48850",
+              "parentUUID": "84985c9a-1eaf-415c-a78f-80dd74ce9bba",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alert OK Cancel",
+              "fullTitle": "Alerts Handling Suite Alert OK Cancel",
+              "timedOut": null,
+              "duration": 708,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//click on alert with ok & cancel segment\ncy.get(\"ul.nav-tabs > li:nth-child(2) > a:nth-child(1)\").click(); //click on the button\ncy.get(\".btn-primary\").click(); //to verify alert message, raise an event\ncy.on('window:confirm', function (strMessage) {\n  expect(strMessage).to.equal('Press a Button !');\n});",
+              "err": {},
+              "uuid": "7979e963-962b-4c80-8e62-646e3e75b512",
+              "parentUUID": "84985c9a-1eaf-415c-a78f-80dd74ce9bba",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4fd46e79-2ca2-498b-af24-92b8f6d48850",
+            "7979e963-962b-4c80-8e62-646e3e75b512"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9474,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

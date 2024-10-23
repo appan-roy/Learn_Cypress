@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-10T18:30:23.021Z",
+    "end": "2020-09-10T18:30:36.895Z",
+    "duration": 13874,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7c4743b4-02ee-4eea-b78a-384985217ac1",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\OnlyTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\OnlyTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "557c0cd8-a5b5-42b0-bea6-38b28bb46942",
+          "title": "Run Only Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify upstox login page title",
+              "fullTitle": "Run Only Test Suite Verify upstox login page title",
+              "timedOut": null,
+              "duration": 8974,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to URL\ncy.visit('https://pro.upstox.com/login'); //Assertion\ncy.title().should('eq', 'Upstox Pro');",
+              "err": {},
+              "uuid": "ed03c5f6-ade6-4c2d-a660-31ef52c18b14",
+              "parentUUID": "557c0cd8-a5b5-42b0-bea6-38b28bb46942",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ed03c5f6-ade6-4c2d-a660-31ef52c18b14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

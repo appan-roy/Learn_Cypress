@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-09-10T18:31:24.005Z",
+    "end": "2020-09-10T18:31:56.939Z",
+    "duration": 32934,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "82e35be5-c91c-4b54-9149-ab3c06b20dbe",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\PageObjectModelTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\PageObjectModelTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa48b57d-069a-470e-840e-a550514b1a41",
+          "title": "Page Object Model Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Orange HRM Login Test",
+              "fullTitle": "Page Object Model Suite Orange HRM Login Test",
+              "timedOut": null,
+              "duration": 18639,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify dashboard tab is present\ncy.get(\"#menu_dashboard_index > b:nth-child(1)\").should('be.visible');",
+              "err": {},
+              "uuid": "89f220f0-270b-44a5-8500-efbe385e3cdb",
+              "parentUUID": "aa48b57d-069a-470e-840e-a550514b1a41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89f220f0-270b-44a5-8500-efbe385e3cdb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18639,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

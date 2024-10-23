@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-09-10T18:29:02.788Z",
+    "end": "2020-09-10T18:29:36.562Z",
+    "duration": 33774,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "66405b45-69b4-4a6d-9151-ccadbb887086",
+      "title": "",
+      "fullFile": "cypress\\integration\\webautomation\\MyFirstTest.spec.js",
+      "file": "cypress\\integration\\webautomation\\MyFirstTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a49e192-bca2-44da-9686-20d63151ed43",
+          "title": "My First Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify upstox login page title",
+              "fullTitle": "My First Test Suite Verify upstox login page title",
+              "timedOut": null,
+              "duration": 23819,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to URL\ncy.visit('https://pro.upstox.com/login'); //Assertion\ncy.title().should('eq', 'Upstocks Pro');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'Upstox Pro' to equal 'Upstocks Pro'",
+                "estack": "AssertionError: Timed out retrying: expected 'Upstox Pro' to equal 'Upstocks Pro'\n    at Context.eval (https://pro.upstox.com/__cypress/tests?p=cypress\\integration\\webautomation\\MyFirstTest.spec.js:106:16)",
+                "diff": "- 'Upstox Pro'\n+ 'Upstocks Pro'\n"
+              },
+              "uuid": "f98123cf-547e-4c41-8143-0741d071e468",
+              "parentUUID": "4a49e192-bca2-44da-9686-20d63151ed43",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify upstox login page title",
+              "fullTitle": "My First Test Suite Verify upstox login page title",
+              "timedOut": null,
+              "duration": 4656,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Navigate to URL\ncy.visit('https://pro.upstox.com/login'); //Assertion\ncy.title().should('eq', 'Upstox Pro');",
+              "err": {},
+              "uuid": "09be9f79-bfa5-4dba-8941-59ae20a4baee",
+              "parentUUID": "4a49e192-bca2-44da-9686-20d63151ed43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09be9f79-bfa5-4dba-8941-59ae20a4baee"
+          ],
+          "failures": [
+            "f98123cf-547e-4c41-8143-0741d071e468"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 28475,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "TestReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "TestReport",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
